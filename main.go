@@ -1,7 +1,6 @@
 package main
 
 import (
-	"chat/impl"
 	"net/http"
 
 	"github.com/gorilla/websocket"
@@ -20,7 +19,7 @@ func wsHandler(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		return
 	}
-	conn, err := impl.InitConnection(websocket)
+	conn, err := InitConnection(websocket)
 	if err != nil {
 		return
 	}
